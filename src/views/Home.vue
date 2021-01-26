@@ -2,6 +2,7 @@
   <div class="home">
     home
     <p ref="p">My name is {{ name }} and my age is {{ age }}</p>
+    <!-- ref is for accessing ref() from setup -->
     <button @click="handleClick">Click me</button>
   </div>
 </template>
@@ -23,6 +24,11 @@ export default {
 
 const handleClick = () => {
   console.log(p, p.value)
+  p.value.classList.add("test")
+  p.value.textContent = 'Hello, ninjas'
+  //we can perform regular JS using ref()
+  //but not before return{} performed
+  //handleClick is performing after click happened and return{} happended as well
 }
 
     return {
