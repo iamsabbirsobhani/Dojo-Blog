@@ -34,7 +34,7 @@ const handleClick = () => {
 //And inside this setup(), we can run any JavaScript
 //Such as create values or create functions
 //Then at the end down(line 38) here in return{}, we just return whatever values
-//or functions we want to make available to the component <template>
+//or functions we want to make available to the component <template>.
     return {
       name,
       age,
