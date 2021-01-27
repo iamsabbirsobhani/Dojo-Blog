@@ -18,7 +18,7 @@ export default {
         onUpdated(() => console.log('component updated'))
     },
     mounted() {
-        console.log('mounted using mounted()')
+        console.log('mounted using mounted()') //we can use Option API's life cycle hooks as well
     }
 
 }
