@@ -10,7 +10,7 @@ const getPost = (id) => {
     const load = async () => {
     try{
         await new Promise(resolve => {
-            setTimeout(resolve, 2000);
+            setTimeout(resolve, 200);
           })
         let data = await fetch(url)
         if(!data.ok){
