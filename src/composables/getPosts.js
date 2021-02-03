@@ -5,8 +5,8 @@ const getPosts = () => {
     const posts = ref([]);
     const error = ref(null);
 
-    // const url = "https://my-json-server.typicode.com/iamsabbirsobhani/json-server-typicode/posts"
-    const url = "http://localhost:3000/posts"
+    const url = "https://my-json-server.typicode.com/iamsabbirsobhani/json-server-typicode/posts"
+    // const url = "http://localhost:3000/posts"
 
     const load = async () => {
       try {

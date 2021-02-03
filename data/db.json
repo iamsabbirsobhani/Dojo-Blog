@@ -44,6 +44,24 @@
       "tags": [
         "tag"
       ]
+    },
+    {
+      "id": 3750,
+      "title": "Text highlight in markdown",
+      "body": "As the markdown documentation states, it is fine to use HTML if you need a feature that is not part of Markdown.\n\nHTML5 supports\n\n<mark>Marked text</mark>\n\nElse you can use span as suggested by Rad Lexus\n\n<span style=\"background-color: #FFFF00\">Marked text</span>",
+      "tags": [
+        "md",
+        "markdown"
+      ]
+    },
+    {
+      "id": 8527,
+      "title": "Text highlight in markdown",
+      "body": "As the markdown documentation states, it is fine to use HTML if you need a feature that is not part of Markdown.\n\nHTML5 supports\n\n<mark>Marked text</mark>\n\nElse you can use span as suggested by Rad Lexus\n\n<span style=\"background-color: #FFFF00\">Marked text</span>",
+      "tags": [
+        "md",
+        "markdown"
+      ]
     }
   ]
 }
