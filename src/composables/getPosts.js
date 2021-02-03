@@ -5,14 +5,11 @@ const getPosts = () => {
     const posts = ref([]);
     const error = ref(null);
 
-    const url = "https://my-json-server.typicode.com/iamsabbirsobhani/json-server-typicode/posts"
-    // const url = "http://localhost:3000/posts"
+    // const url = "https://my-json-server.typicode.com/iamsabbirsobhani/json-server-typicode/posts"
+    const url = "http://localhost:3000/posts"
 
     const load = async () => {
       try {
-        await new Promise(resolve => {
-          setTimeout(resolve, 200);
-        })
         let data = await fetch(url);
         if (!data.ok) {
           throw Error("no data available");
