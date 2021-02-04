@@ -21,47 +21,15 @@
       ]
     },
     {
-      "title": "How to make a cup of tea",
-      "body": "A cup of tea is a part of many morning and daily rituals. It is estimated that the number of cups of tea drunk every day in Britain is 165 million!\n\nTea is an intricate part of our daily lives and no matter what you drink or when you drink it. We believe that everyone should have that perfect cup of tea every single day.\n\nThere are many theories and ideologies behind making the perfect tea and everyone has their own way, their favourite way, the way their mum taught them.\n\nHere’s our perfect method to make that special cup of tea.",
+      "id": 3,
+      "title": "top 6 CSS tips",
+      "body": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio",
       "tags": [
-        "tea",
-        "drink"
-      ],
-      "id": 3
-    },
-    {
-      "id": 495,
-      "title": "The unexpected ingredients that improve solar cells",
-      "body": "From fizzy drinks to moreish crisps, many inventions are famed for their unusual and often closely guarded ingredients – but solar panels aren't usually found at the top of that list. However, several food ingredients have proved to be unexpectedly useful when added to solar cells.\n\nDepending on what you like to eat, there's a good chance you can find at least one of them at home. Capsaicin, the chemical that gives chilli peppers their spicy sting, has been found to improve perovskite solar cells – the devices that make up solar panels.\n\nAdding capsaicin expands the grains which make up the active material of the solar cell, allowing it to more effectively transport electricity. More importantly, the material goes from having a deficit of electrons to having an excess, which changes how the cell operates and allows more sunlight to be converted to electricity. In essence, adding capsaicin adds electrons (which may or may not be the same effect you experience on your tongue after a particularly spicy biryani).",
-      "tags": [
-        "cook"
-      ]
-    },
-    {
-      "id": 2088,
-      "title": "This is new post title",
-      "body": "This is new post",
-      "tags": [
-        "tag"
-      ]
-    },
-    {
-      "id": 3750,
-      "title": "Text highlight in markdown",
-      "body": "As the markdown documentation states, it is fine to use HTML if you need a feature that is not part of Markdown.\n\nHTML5 supports\n\n<mark>Marked text</mark>\n\nElse you can use span as suggested by Rad Lexus\n\n<span style=\"background-color: #FFFF00\">Marked text</span>",
-      "tags": [
-        "md",
-        "markdown"
-      ]
-    },
-    {
-      "id": 8527,
-      "title": "Text highlight in markdown",
-      "body": "As the markdown documentation states, it is fine to use HTML if you need a feature that is not part of Markdown.\n\nHTML5 supports\n\n<mark>Marked text</mark>\n\nElse you can use span as suggested by Rad Lexus\n\n<span style=\"background-color: #FFFF00\">Marked text</span>",
-      "tags": [
-        "md",
-        "markdown"
+        "CSS",
+        "webdevv",
+        "coding"
       ]
     }
+
   ]
 }

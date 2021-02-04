@@ -15,11 +15,11 @@ const getPosts = () => {
           throw Error("no data available");
         }
         let res = await data.json();
-        console.log(res);
+        // console.log(res);
         posts.value = res;
       } catch (err) {
         error.value = err.message;
-        console.log(error.value);
+        // console.log(error.value);
       }
     }
 

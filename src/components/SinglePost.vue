@@ -6,7 +6,7 @@
     <p>{{ snippet }}</p>
     <span  v-for="tag in post.tags" :key="tag">
       #{{ tag }}
-    </span>
+       </span>
   </div>
 </template>
 
