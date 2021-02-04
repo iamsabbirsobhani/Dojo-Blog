@@ -29,7 +29,40 @@
         "webdevv",
         "coding"
       ]
+    },
+    {
+      "id": 6782,
+      "title": "Markdown Cheat Sheet",
+      "body": "Basic Syntax\nThese are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.\n\nElement\tMarkdown Syntax\nHeading\t# H1\n## H2\n### H3\nBold\t**bold text**\nItalic\t*italicized text*\nBlockquote\t> blockquote\nOrdered List\t1. First item\n2. Second item\n3. Third item\nUnordered List\t- First item\n- Second item\n- Third item\nCode\t`code`\nHorizontal Rule\t---\nLink\t[title](https://www.example.com)\nImage\t![alt text](image.jpg)\n\nlink: https://www.markdownguide.org/cheat-sheet/",
+      "tags": [
+        "markdown"
+      ]
+    },
+    {
+      "id": 5744,
+      "title": "Dynamically Switching From One HTML Element to Another in Vue",
+      "body": "A friend once contacted me asking if I had a way to dynamically change one HTML element into another within Vue’s template block. For instance, shifting a <div> element to a <span> element based on some criteria. The trick was to do this without relying on a series of v-if and v-else code.\n\nI didn’t think much of it because I couldn’t see a strong reason to do such a thing; it just doesn’t come up that often. Later that same day, though, he reached out again and told me he learned how to change element types. He excitedly pointed out that Vue has a built-in component that can be used as a dynamic element in the very way that he needed.\n\nThis small feature can keep code in the template nice and tidy. It can reduce v-if and v-else glut down to a smaller amount of code that’s easier to understand and maintain. This allows us to use methods or computed methods to create nicely-coded, and yet more elaborate, conditions in the script block. That’s where such things belong: in the script, not the template block.\n\nI had the idea for this article mainly because we use this feature in several places in the design system where I work. Granted it’s not a huge feature and it is barely mentioned in the documentation, at least as far as I can tell. Yet it has potential to help render specific HTML elements in components.\n\nlink: https://css-tricks.com/dynamically-switching-from-one-html-element-to-another-in-vue/",
+      "tags": [
+        "vue"
+      ]
+    },
+    {
+      "id": 7455,
+      "title": "Styling Web Components",
+      "body": "Nolan Lawson has a little emoji-picker-element that is awfully handy and incredibly easy to use. But considering you’d probably be using it within your own app, it should be style-able so it can incorporated nicely anywhere. How to allow that styling isn’t exactly obvious:\n\nWhat wasn’t obvious to me, though, was how to allow users to style it. What if they wanted a different background color? What if they wanted the emoji to be bigger? What if they wanted a different font for the input field?\n\nNolan list four possibilities (I’ll rename them a bit in a way that helps me understand them).\n\nCSS Custom Properties: Style things like background: var(--background, white);. Custom properties penetrate the Shadow DOM, so you’re essentially adding styling hooks.\nPre-built variations: You can add a class attribute to the custom elements, which are easy to access within CSS inside the Shadow DOM thanks to the pseudo selectors, like :host(.dark) { background: black; }.\nShadow parts: You add attributes to things you want to be style-able, like <span part=\"foo\">, then CSS from the outside can reach in like custom-component::part(foo) { }.\nUser forced: Despite the nothing in/nothing out vibe of the Shadow DOM, you can always reach the element.shadowRoot and inject a <style>, so there is always a way to get styles in.\nIt’s probably worth a mention that the DOM you slot into place is style-able from “outside” CSS as it were.\n\nThis is such a funky problem. I like the Shadow DOM because it’s the closest thing we have on the web platform to scoped styles which are definitely a good idea. But I don’t love any of those styling solutions. They all seem to force me into thinking about what kind of styling API I want to offer and document it, while not encouraging any particular consistency across components.\n\nTo me, the DOM already is a styling API. I like the scoped protection, but there should be an easy way to reach in there and style things if I want to. Seems like there should be a very simple CSS-only way to reach inside and still use the cascade and such. Maybe the dash-separated custom-element name is enough? my-custom-elemement li { }. Or maybe it’s more explicit, like @shadow my-custom-element li { }. I just think it should be easier. Constructable Stylesheets don’t seem like a step toward make it easier, either.\n\nLast time I was thinking about styling web components, I was just trying to figure out how to it works in the first place, not considering how to expose styling options to consumers of the component.\n\nDoes this actually come up as a problem in day-to-day work? Sure does.\n\n",
+      "tags": [
+        "css"
+      ]
+    },
+    {
+      "id": 5304,
+      "title": "Top Programming Language ",
+      "body": "The 9 Best Programming Languages to Learn in 2021\nJavaScript. It's impossible to be a software developer these days without using JavaScript in some way. ...\nSwift. If you're interested in Apple products and mobile app development, Swift is a good place to start. ...\nScala. ...\nGo. ...\nPython. ...\nElm. ...\nRuby. ...\nC#",
+      "tags": [
+        "programming",
+        "language",
+        "compare"
+      ]
     }
-
   ]
 }
