@@ -1,21 +1,22 @@
 import { ref } from 'vue'
+import { projectFirestore } from '../firebase/config'
 
 const getPost = (id) => {
     const post  = ref(null)
     const error = ref(null)
 
-    const url = "https://my-json-server.typicode.com/iamsabbirsobhani/json-server-typicode/posts/"+id
-    // const url = "http://localhost:3000/posts/"+id
 
     const load = async () => {
     try{
-        let data = await fetch(url)
-        if(!data.ok){
-            throw Error('Data does not exist')
+        const response = await projectFirestore.collection('posts').doc(id).get()
+
+        post.value = { ...response.data(), id: response.id }
+
+        if(!response.exists){
+            throw Error('File can not find')
         }
-        post.value = await data.json()
     }catch(err){
-        console.log(err)
+        // console.log(err)
         error.value = err.message
     }
 }

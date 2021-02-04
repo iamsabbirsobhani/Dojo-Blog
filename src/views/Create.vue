@@ -16,6 +16,7 @@
 <script>
 import { ref } from "vue";
 import { useRouter } from 'vue-router'
+import { projectFirestore } from '../firebase/config';
 export default {
   setup() {
     const title = ref("");
@@ -42,11 +43,11 @@ export default {
         body: body.value,
         tags: tags.value,
       };
-      await fetch("http://localhost:3000/posts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(post),
-      });
+
+      const response = projectFirestore.collection('posts').add(post)
+
+
+      console.log(response)
 
       router.push({ name: 'Home' })
 
