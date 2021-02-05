@@ -44,6 +44,7 @@ export default {
         title: title.value,
         body: body.value,
         tags: tags.value,
+        published: now.toDateString() +' '+now.toTimeString()
       };
 
       const response = projectFirestore.collection('posts').add(post)
