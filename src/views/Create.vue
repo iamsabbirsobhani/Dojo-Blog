@@ -36,9 +36,11 @@ export default {
       tag.value = "";
     };
 
+    const now = new Date();
+
     const handleSubmit  = async () => {
       const post = {
-        id: Math.floor(Math.random() * 10000),
+        id: now.getTime(),
         title: title.value,
         body: body.value,
         tags: tags.value,
