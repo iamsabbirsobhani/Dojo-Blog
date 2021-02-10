@@ -16,7 +16,6 @@ const getPost = (id) => {
             throw Error('File can not find')
         }
     }catch(err){
-        // console.log(err)
         error.value = err.message
     }
 }
