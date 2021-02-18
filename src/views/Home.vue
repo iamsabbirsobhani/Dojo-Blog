@@ -21,9 +21,23 @@ export default {
                                         //Note: watch() & watchEffect()
       console.log('watch function ran') //difference between them is
                                         //watch() active after everytime fire the callback
-    })                                  //watchEffect() active after initialize then fire everytime with callback
-                                        //everytime watchEffect() run twice once with the given value and two without the value
-
+    })                                  //watchEffect() active after initialize then fire everytime with callback.
+                                        //It is important,
+                                        //watchEffect() Fires Once Initially after ⭐⭐⭐
+                                        //Inside the watchEffect Function we pass another callback function
+                                        //And, that callback function fires everytime, when inside the callback function there's a change ⭐
+                                        //for whatever properties we use(inside the callback function). ⭐
+                                        
+                                        
+    //Here I am giving an example of watchEffect() when I was developing Live Chat apps for unsubscribing from realtime snapshot: It can be found inside "getCollection.js"
+    //files from "Live-Chat" repositories
+    watchEffect((onInvalidate) => {
+      // unsub from previous collection when watcher is stopped (component unmounted)
+      onInvalidate(() => unsub)
+    } 
+    // End of example                                   
+                                        
+                                    
     const stopEffect = watchEffect(() => {
       console.log('watchEffect function ran', search.value)
     })
