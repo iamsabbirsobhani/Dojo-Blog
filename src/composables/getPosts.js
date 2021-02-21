@@ -21,7 +21,7 @@ const getPosts = () => {
         // posts.value = res;
 
         //Getting data using Firebase
-        const res = await projectFirestore.collection('posts').orderBy('id','asc').get()
+        const res = await projectFirestore.collection('posts').orderBy('id','desc').get()
 
 
         posts.value = res.docs.map(doc => {

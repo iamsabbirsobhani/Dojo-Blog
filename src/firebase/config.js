@@ -2,19 +2,19 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCt9cLgwnll8G-ySlmzbHrSvYKHXXSQI68",
-    authDomain: "vue-firebase-sites---learning.firebaseapp.com",
-    projectId: "vue-firebase-sites---learning",
-    storageBucket: "vue-firebase-sites---learning.appspot.com",
-    messagingSenderId: "917486628068",
-    appId: "1:917486628068:web:4fc39f7749bf4b55a710f1"
-  };
+  apiKey: "AIzaSyBs_1LBupexsMAVy4lyQupX19l259Ap9_Y",
+  authDomain: "dojo-bl.firebaseapp.com",
+  projectId: "dojo-bl",
+  storageBucket: "dojo-bl.appspot.com",
+  messagingSenderId: "636777854264",
+  appId: "1:636777854264:web:f059b60257693cf002bdcd"
+};
 
 // init firebase
 firebase.initializeApp(firebaseConfig)
 
 // init firebase service
 const projectFirestore = firebase.firestore()
-const timestamp = firebase.firestore.FieldValue.serverTimestamp
+// const timestamp = firebase.firestore.FieldValue.serverTimestamp
 
-export { projectFirestore , timestamp}
+export { projectFirestore }

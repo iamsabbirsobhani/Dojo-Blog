@@ -6,7 +6,7 @@
       <label>Content:</label>
       <textarea v-model="body" required></textarea>
       <label>Tags (hit enter to add a tag)</label>
-      <input v-model="tag" type="text" @keydown.enter.prevent="handleKeydown" />
+      <input v-model="tag" type="text" @keydown.enter.prevent="handleKeydown"/>
       <div v-for="tag in tags" :key="tag" class="pill">#{{ tag }}</div>
       <button>Add post</button>
     </form>
@@ -14,9 +14,10 @@
 </template>
 
 <script>
+import { format } from 'date-fns'
 import { ref } from "vue";
 import { useRouter } from 'vue-router'
-import { projectFirestore, timestamp } from '../firebase/config';
+import { projectFirestore } from '../firebase/config';
 export default {
   setup() {
     const title = ref("");
@@ -36,7 +37,10 @@ export default {
       tag.value = "";
     };
 
+    // Creating blog creating date and time with data-fns
     const now = new Date();
+    const created = format(now, 'PPpp')
+    // End of Creating blog creating date and time with data-fns
 
     const handleSubmit  = async () => {
       const post = {
@@ -44,7 +48,7 @@ export default {
         title: title.value,
         body: body.value,
         tags: tags.value,
-        published: timestamp()
+        published:created
       };
 
       const response = projectFirestore.collection('posts').add(post)
