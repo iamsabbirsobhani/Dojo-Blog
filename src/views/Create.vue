@@ -4,7 +4,13 @@
       <label>Title:</label>
       <input v-model="title" type="text" required />
       <label>Content:</label>
-      <textarea v-model="body" required></textarea>
+
+      <!-- <textarea v-model="body" required></textarea> -->
+
+      <!-- Quill text editor -->
+      <Editor v-model="body" editorStyle="height: 200px"/>
+      <!-- end of Quill text editor -->
+
       <label>Tags (hit enter to add a tag)</label>
       <input v-model="tag" type="text" @keydown.enter.prevent="handleKeydown"/>
       <div v-for="tag in tags" :key="tag" class="pill">#{{ tag }}</div>
@@ -14,11 +20,15 @@
 </template>
 
 <script>
+import Editor from 'primevue/editor';
+import Button from 'primevue/button';
+
 import { format } from 'date-fns'
 import { ref } from "vue";
 import { useRouter } from 'vue-router'
 import { projectFirestore } from '../firebase/config';
 export default {
+  components: { Editor, Button },
   setup() {
     const title = ref("");
     const body = ref("");
@@ -77,8 +87,7 @@ form {
   margin: 0 auto;
   text-align: left;
 }
-input,
-textarea {
+input{
   display: block;
   margin: 10px 0;
   width: 100%;
@@ -86,9 +95,7 @@ textarea {
   padding: 10px;
   border: 1px solid #eee;
 }
-textarea {
-  height: 160px;
-}
+
 label {
   display: inline-block;
   margin-top: 30px;

@@ -3,7 +3,7 @@
   <div v-if="post" class="post">
     <h3>{{ post.title }}</h3>
     <pre>{{ post.published }}</pre>
-    <p class="pre">{{ post.body }}</p>
+    <div class="pre" v-html="post.body"></div>
     <button class="btn3" @click="handleDelete">delete post</button>
   </div>
   <div v-else>
@@ -43,17 +43,31 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 .post {
   max-width: 1200px;
   margin: 0 auto;
+  word-wrap: break-word;
 }
 .post p {
   color: #444;
   line-height: 1.5em;
   margin-top: 40px;
+  word-wrap: break-word;
+  font-family: 'Montserrat', sans-serif;
+  color: black !important;
+  font-weight: 400 !important;
 }
 .pre {
   white-space: pre-wrap;
+}
+.pre pre{
+  max-width: 400px;
+  color: rgb(248, 248, 248);
+  background-color: rgb(48, 48, 48);
+  padding: 10px;
+  word-wrap: break-word;
+  border-radius: 5px;
 }
 .btn3 {
   margin: 10px auto;
