@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 .post {
   max-width: 900px;
   margin: 0 auto;
@@ -54,20 +54,24 @@ export default {
   line-height: 1.5em;
   margin-top: 40px;
   word-wrap: break-word;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: black !important;
   font-weight: 400 !important;
 }
 .pre {
   white-space: pre-wrap;
 }
-.pre pre{
+.pre pre {
   max-width: 400px;
   color: rgb(248, 248, 248);
   background-color: rgb(48, 48, 48);
   padding: 10px;
   word-wrap: break-word;
   border-radius: 5px;
+}
+img {
+  margin: 10px auto;
+  max-width: 450px;
 }
 .btn3 {
   margin: 10px auto;
@@ -77,5 +81,11 @@ export default {
 pre {
   color: #c5c5c5;
   white-space: pre-line;
+}
+
+@media (max-width: 425px) {
+  img {
+    max-width: 300px;
+  }
 }
 </style>
