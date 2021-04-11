@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 .post {
   max-width: 900px;
@@ -59,6 +59,7 @@ export default {
   font-weight: 400 !important;
 }
 .pre {
+  padding: 10px;
   white-space: pre-wrap;
 }
 .pre pre{
