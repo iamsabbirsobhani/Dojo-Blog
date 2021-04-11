@@ -45,7 +45,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 .post {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   word-wrap: break-word;
 }

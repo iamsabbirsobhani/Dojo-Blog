@@ -54,4 +54,5 @@ export default {
   left: -30px;
   transform: rotateZ(-1deg);
 }
+
 </style>
